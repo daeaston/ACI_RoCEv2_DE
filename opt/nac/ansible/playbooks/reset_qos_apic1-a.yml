@@ -1,0 +1,15 @@
+---
+- name: Reset RoCEv2 QoS on apic1-a
+  hosts: apic1-a
+  gather_facts: no
+  tasks:
+    - name: Delete qosClass (level2)
+      uri:
+        url: "/api/node/mo/uni/infra/qosinst-default/class-level2.json"
+        method: DELETE
+        validate_certs: no
+        return_content: yes
+      delegate_to: localhost
+      vars:
+        ansible_httpapi_use_ssl: yes
+        ansible_httpapi_validate_certs: no

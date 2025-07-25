@@ -1,0 +1,10 @@
+---
+- name: Apply RoCEv2 QoS Policy to apic1-a
+  hosts: apic1-a
+  gather_facts: no
+  tasks:
+    - name: Load QoS class
+      import_role:
+        name: netascode.acimodule.qos_class
+      vars:
+        aci_yaml_data: "{{ lookup('file', '../nac_data/qos.nac.yaml') | from_yaml }}"

@@ -1,0 +1,16 @@
+qos:
+  classes:
+  - admin: enabled
+    congestion:
+      algo: wred
+      ecn: enabled
+      wredMaxThreshold: 60
+      wredMinThreshold: 40
+      wredProbability: 0
+    name: level2
+    pfc_policy:
+      adminSt: 'yes'
+      enableScope: fabric
+      name: default
+      noDropCos: '3'
+    prio: level2

@@ -1,0 +1,16 @@
+apic:
+  access_policies:
+    qos:
+      qos_classes:
+        - level: 2
+          congestion_algorithm: wred
+          wred_min_threshold: 40
+          wred_max_threshold: 60
+          wred_probability: 0
+          ecn: true
+          pfc_state: true
+          no_drop_cos: cos3
+          pfc_scope: fabric
+
+
+

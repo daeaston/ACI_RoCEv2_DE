@@ -1,0 +1,10 @@
+qos:
+  egress:
+    policies:
+    - cos: 4
+      description: QoS Policy for RoCEv2 traffic (NaC version)
+      dscp: af31
+      name: RoCEv2-QoS-NAC
+      rate_limit:
+        burst: 10000
+        rate: 1000000

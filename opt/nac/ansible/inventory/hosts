@@ -1,0 +1,3 @@
+[apics]
+apic1-a ansible_host=apic1-a.corp.pseudoco.com
+apic1-b ansible_host=apic1-b.corp.pseudoco.com
